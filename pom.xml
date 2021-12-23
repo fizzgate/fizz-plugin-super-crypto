@@ -181,7 +181,7 @@
                         </configuration>
                     </plugin>
                     
-                    <!-- maven 打包时跳过测试 -->
+                    <!-- maven package skip test -->
 	            <plugin>
 			        <groupId>org.apache.maven.plugins</groupId>
 			        <artifactId>maven-surefire-plugin</artifactId>
