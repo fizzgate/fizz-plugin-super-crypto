@@ -11,8 +11,8 @@
     </parent>
 
     <groupId>com.fizzgate</groupId>
-    <artifactId>fizz-super-crypto-plugin</artifactId>
-    <version>1.0</version>
+    <artifactId>fizz-plugin-super-crypto</artifactId>
+    <version>2.3.4-beta2</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -22,7 +22,7 @@
         <lettuce.version>5.3.7.RELEASE</lettuce.version>
         <netty.version>4.1.70.Final</netty.version>
         <httpcore.version>4.4.14</httpcore.version>
-        <log4j2.version>2.14.1</log4j2.version>
+        <log4j2.version>2.16.0</log4j2.version>
         <slf4j.version>1.7.32</slf4j.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <lombok.version>1.18.22</lombok.version>
@@ -34,6 +34,7 @@
         <commons-codec.version>1.15</commons-codec.version>
         <commons-pool2.version>2.11.1</commons-pool2.version>
         <gson.version>2.8.8</gson.version>
+        <json-path.version>2.6.0</json-path.version>
     </properties>
 
     <repositories>
@@ -63,6 +64,13 @@
             <artifactId>fizz-spring-boot-starter</artifactId>
             <version>2.3.4-beta2</version>
         </dependency>
+        
+   <!-- json-path -->
+	<dependency>
+	    <groupId>com.jayway.jsonpath</groupId>
+	    <artifactId>json-path</artifactId>
+	</dependency>
+        
     </dependencies>
 
     <url>https://github.com/wehotel/fizz-gateway-community</url>
@@ -214,8 +222,9 @@
                         <exclude>*.xml</exclude>
                         <exclude>*.yml</exclude>
                         <!-- 配置类、启动类等，不打进插件 jar -->
-                        <!--<exclude>we/plugin/demo/DemoApiConfig**</exclude>
-                        <exclude>we/plugin/demo/Main**</exclude>-->
+						<exclude>we/plugin/crypto/DemoApiConfig**</exclude>
+						<exclude>we/plugin/crypto/DemoPluginFilter**</exclude>
+						<exclude>we/plugin/crypto/FizzSuperCryptoPluginApplication**</exclude>
                     </excludes>
                 </configuration>
             </plugin>
