@@ -131,13 +131,12 @@ public class CryptoPluginFilter implements FizzPluginFilter {
 	private Mono<Void> requestHeadersCrypto(ServerWebExchange exchange, Map<String, Object> config, String secretKey, Integer mode, String algorithm, Integer keyTypeValue, String jsonPath) {
 		ServerHttpRequest request = exchange.getRequest();
 		FizzServerHttpRequestDecorator requestDecorator = null;
-		if(request instanceof FizzServerHttpRequestDecorator) {
+		if (request instanceof FizzServerHttpRequestDecorator) {
 			requestDecorator = (FizzServerHttpRequestDecorator) request;
 		} else {
 			requestDecorator = new FizzServerHttpRequestDecorator(request);
 		}
-		
-				
+
 		HttpHeaders headers = requestDecorator.getHeaders();
 		KeyType keyType = null;
 		if (keyTypeValue != null && keyTypeValue == KeyType.PublicKey.getValue()) {
@@ -183,7 +182,7 @@ public class CryptoPluginFilter implements FizzPluginFilter {
 
 		Mono<Void> mono = null;
 		if (request.getMethod().equals(HttpMethod.GET)) {
-			FizzServerHttpRequestDecorator requestDecorator = (FizzServerHttpRequestDecorator)exchange.getRequest();
+			FizzServerHttpRequestDecorator requestDecorator = (FizzServerHttpRequestDecorator) exchange.getRequest();
 			KeyType keyType = null;
 			if (keyTypeValue != null && keyTypeValue == KeyType.PublicKey.getValue()) {
 				keyType = KeyType.PublicKey;
@@ -310,7 +309,7 @@ public class CryptoPluginFilter implements FizzPluginFilter {
 							StateInfo<String> result = dataCrypto(algorithm, secretKey, headerValue, mode, keyType);
 							if (ObjectUtil.isNotEmpty(result) && !StrUtil.equals(result.getCode(), StateCode.SUCCESS.getCode())) {
 								log.error("加解密处理出现异常,exception={}", result);
-								String errorJson=WebUtils.jsonRespBody(1001, "异常信息");
+								String errorJson = WebUtils.jsonRespBody(1001, "异常信息");
 								return Mono.just(response.bufferFactory().wrap(errorJson.getBytes()));
 							}
 							String newValue = result.getData();
@@ -464,6 +463,9 @@ public class CryptoPluginFilter implements FizzPluginFilter {
 			StateInfo<String> result = dataCrypto(algorithm, secretKey, originData, mode, keyType);
 			if (ObjectUtil.isNotEmpty(result) && !StrUtil.equals(result.getCode(), StateCode.SUCCESS.getCode())) {
 				return result;
+			}
+			if (ObjectUtil.isNotEmpty(result) && StrUtil.equals(result.getCode(), StateCode.SUCCESS.getCode())) {
+				newData = result.getData();
 			}
 		}
 
