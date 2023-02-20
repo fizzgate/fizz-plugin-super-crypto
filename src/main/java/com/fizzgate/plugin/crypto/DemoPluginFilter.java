@@ -1,4 +1,4 @@
-package we.plugin.crypto;
+package com.fizzgate.plugin.crypto;
 
 import java.util.Map;
 
@@ -10,11 +10,11 @@ import org.springframework.web.server.ServerWebExchange;
 
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
-import we.config.ProxyWebClientConfig;
-import we.plugin.FizzPluginFilter;
-import we.plugin.FizzPluginFilterChain;
-import we.plugin.PluginConfig;
-import we.util.ReactorUtils;
+import com.fizzgate.config.ProxyWebClientConfig;
+import com.fizzgate.plugin.FizzPluginFilter;
+import com.fizzgate.plugin.FizzPluginFilterChain;
+import com.fizzgate.plugin.PluginConfig;
+import com.fizzgate.util.ReactorUtils;
 
 @Component(DemoPluginFilter.DEMO_PLUGIN) // 必须，且为插件 id
 @Slf4j

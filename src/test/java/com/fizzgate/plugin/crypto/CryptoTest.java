@@ -1,11 +1,9 @@
-package we.plugin.crypto;
+package com.fizzgate.plugin.crypto;
 
-import java.net.URLDecoder;
 import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -14,10 +12,7 @@ import javax.crypto.SecretKey;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONPath;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 
@@ -30,7 +25,7 @@ import cn.hutool.crypto.digest.DigestAlgorithm;
 import cn.hutool.crypto.digest.Digester;
 import cn.hutool.crypto.symmetric.SymmetricAlgorithm;
 import cn.hutool.crypto.symmetric.SymmetricCrypto;
-import we.plugin.crypto.bean.ParamsEnum;
+import com.fizzgate.plugin.crypto.bean.ParamsEnum;
 
 /**
  *  

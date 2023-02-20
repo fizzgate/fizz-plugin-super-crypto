@@ -1,4 +1,4 @@
-package we.plugin.crypto;
+package com.fizzgate.plugin.crypto;
 
 import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
@@ -37,18 +37,18 @@ import cn.hutool.crypto.digest.DigestAlgorithm;
 import cn.hutool.crypto.symmetric.SymmetricAlgorithm;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
-import we.plugin.FizzPluginFilter;
-import we.plugin.FizzPluginFilterChain;
-import we.plugin.crypto.bean.CommonConstant;
-import we.plugin.crypto.bean.ParamsEnum;
-import we.plugin.crypto.bean.StateCode;
-import we.plugin.crypto.bean.StateInfo;
-import we.plugin.crypto.service.CryptoService;
-import we.proxy.Route;
-import we.spring.http.server.reactive.ext.FizzServerHttpRequestDecorator;
-import we.spring.http.server.reactive.ext.FizzServerHttpResponseDecorator;
-import we.util.NettyDataBufferUtils;
-import we.util.WebUtils;
+import com.fizzgate.plugin.FizzPluginFilter;
+import com.fizzgate.plugin.FizzPluginFilterChain;
+import com.fizzgate.plugin.crypto.bean.CommonConstant;
+import com.fizzgate.plugin.crypto.bean.ParamsEnum;
+import com.fizzgate.plugin.crypto.bean.StateCode;
+import com.fizzgate.plugin.crypto.bean.StateInfo;
+import com.fizzgate.plugin.crypto.service.CryptoService;
+import com.fizzgate.proxy.Route;
+import com.fizzgate.spring.http.server.reactive.ext.FizzServerHttpRequestDecorator;
+import com.fizzgate.spring.http.server.reactive.ext.FizzServerHttpResponseDecorator;
+import com.fizzgate.util.NettyDataBufferUtils;
+import com.fizzgate.util.WebUtils;
 
 /**
  *  

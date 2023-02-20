@@ -1,4 +1,4 @@
-package we.plugin.crypto.bean;
+package com.fizzgate.plugin.crypto.bean;
 
 /**
  *  通用常量

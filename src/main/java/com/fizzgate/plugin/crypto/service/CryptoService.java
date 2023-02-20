@@ -1,4 +1,4 @@
-package we.plugin.crypto.service;
+package com.fizzgate.plugin.crypto.service;
 
 import java.text.MessageFormat;
 import java.util.Set;
@@ -18,9 +18,9 @@ import cn.hutool.crypto.digest.Digester;
 import cn.hutool.crypto.symmetric.SymmetricAlgorithm;
 import cn.hutool.crypto.symmetric.SymmetricCrypto;
 import lombok.extern.slf4j.Slf4j;
-import we.plugin.crypto.bean.CommonConstant;
-import we.plugin.crypto.bean.StateCode;
-import we.plugin.crypto.bean.StateInfo;
+import com.fizzgate.plugin.crypto.bean.CommonConstant;
+import com.fizzgate.plugin.crypto.bean.StateCode;
+import com.fizzgate.plugin.crypto.bean.StateInfo;
 
 /**
  *  加解密业务处理

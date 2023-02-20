@@ -1,4 +1,4 @@
-package we.plugin.crypto.bean;
+package com.fizzgate.plugin.crypto.bean;
 
 public enum ParamsEnum {
 	ALGORITHM("algorithm"), SECRET_KEY("secretKey"), CRYPTO_TYPE("cryptoType"), MODE("mode"), KEY_TYPE("keyType"), JSON_PATH("jsonPath");

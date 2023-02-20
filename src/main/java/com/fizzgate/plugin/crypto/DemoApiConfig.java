@@ -1,13 +1,13 @@
-package we.plugin.crypto;
+package com.fizzgate.plugin.crypto;
 
 import org.springframework.context.annotation.Configuration;
 
 import com.google.common.collect.Maps;
 
-import we.config.ManualApiConfig;
-import we.plugin.PluginConfig;
-import we.plugin.auth.ApiConfig;
-import we.plugin.requestbody.RequestBodyPlugin;
+import com.fizzgate.config.ManualApiConfig;
+import com.fizzgate.plugin.PluginConfig;
+import com.fizzgate.plugin.auth.ApiConfig;
+import com.fizzgate.plugin.requestbody.RequestBodyPlugin;
 
 import java.util.ArrayList;
 import java.util.Collections;

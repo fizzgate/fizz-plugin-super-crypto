@@ -1,9 +1,6 @@
-package we.plugin.crypto;
-
-import java.security.InvalidKeyException;
+package com.fizzgate.plugin.crypto;
 
 import org.apache.commons.lang3.StringUtils;
-import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -14,12 +11,11 @@ import com.alibaba.fastjson.JSONPath;
 
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
-import cn.hutool.crypto.CryptoException;
 import cn.hutool.crypto.asymmetric.KeyType;
-import we.plugin.crypto.bean.CommonConstant;
-import we.plugin.crypto.bean.StateCode;
-import we.plugin.crypto.bean.StateInfo;
-import we.plugin.crypto.service.CryptoService;
+import com.fizzgate.plugin.crypto.bean.CommonConstant;
+import com.fizzgate.plugin.crypto.bean.StateCode;
+import com.fizzgate.plugin.crypto.bean.StateInfo;
+import com.fizzgate.plugin.crypto.service.CryptoService;
 
 public class ServiceTest {
 

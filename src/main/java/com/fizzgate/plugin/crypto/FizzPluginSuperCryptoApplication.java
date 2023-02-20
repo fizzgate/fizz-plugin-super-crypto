@@ -1,4 +1,4 @@
-package we.plugin.crypto;
+package com.fizzgate.plugin.crypto;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -67,7 +67,7 @@ import org.springframework.boot.autoconfigure.transaction.TransactionAutoConfigu
 import org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.reactive.error.ErrorWebFluxAutoConfiguration;
 
-import we.FizzAppContext;
+import com.fizzgate.FizzAppContext;
 
 @SpringBootApplication(
         exclude = {
@@ -154,7 +154,7 @@ import we.FizzAppContext;
                 ReactiveOAuth2ResourceServerAutoConfiguration.class,
                 QuartzAutoConfiguration.class
         },
-        scanBasePackages = {"we"}
+        scanBasePackages = {"com.fizzgate"}
 )
 public class FizzPluginSuperCryptoApplication {
 
